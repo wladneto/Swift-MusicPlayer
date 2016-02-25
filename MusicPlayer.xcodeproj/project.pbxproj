@@ -12,6 +12,8 @@
 		E44CFEE71C62A9CB00420C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44CFEE51C62A9CB00420C47 /* Main.storyboard */; };
 		E44CFEE91C62A9CB00420C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44CFEE81C62A9CB00420C47 /* Assets.xcassets */; };
 		E44CFEEC1C62A9CB00420C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44CFEEA1C62A9CB00420C47 /* LaunchScreen.storyboard */; };
+		E44CFEF41C62A9F500420C47 /* frango.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E44CFEF31C62A9F500420C47 /* frango.mp3 */; };
+		E44CFEF61C62AB7E00420C47 /* frango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E44CFEF51C62AB7E00420C47 /* frango.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E44CFEE81C62A9CB00420C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E44CFEEB1C62A9CB00420C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E44CFEED1C62A9CC00420C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E44CFEF31C62A9F500420C47 /* frango.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = frango.mp3; sourceTree = "<group>"; };
+		E44CFEF51C62AB7E00420C47 /* frango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frango.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				E44CFEE11C62A9CB00420C47 /* AppDelegate.swift */,
 				E44CFEE31C62A9CB00420C47 /* ViewController.swift */,
+				E44CFEF31C62A9F500420C47 /* frango.mp3 */,
+				E44CFEF51C62AB7E00420C47 /* frango.jpg */,
 				E44CFEE51C62A9CB00420C47 /* Main.storyboard */,
 				E44CFEE81C62A9CB00420C47 /* Assets.xcassets */,
 				E44CFEEA1C62A9CB00420C47 /* LaunchScreen.storyboard */,
@@ -123,7 +129,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E44CFEF61C62AB7E00420C47 /* frango.jpg in Resources */,
 				E44CFEEC1C62A9CB00420C47 /* LaunchScreen.storyboard in Resources */,
+				E44CFEF41C62A9F500420C47 /* frango.mp3 in Resources */,
 				E44CFEE91C62A9CB00420C47 /* Assets.xcassets in Resources */,
 				E44CFEE71C62A9CB00420C47 /* Main.storyboard in Resources */,
 			);

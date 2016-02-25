@@ -1,25 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PcZ-ha-kh6">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MwZ-Iw-YJw"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Frango da Malásia" id="lRp-Ze-hsz">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="Hkh-wV-0hf">
+                                            <connections>
+                                                <action selector="funcaoPlay:" destination="BYZ-38-t0r" id="TOI-RG-N5g"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thO-lZ-lue">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="qIm-IV-wQf"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="hbr-NA-rc9">
+                                        <connections>
+                                            <action selector="funcaoPausa:" destination="BYZ-38-t0r" id="t93-wz-Azu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dRu-pv-hQ9"/>
+                                    <barButtonItem systemItem="stop" id="Ubh-Ag-wNN">
+                                        <connections>
+                                            <action selector="funcaoStop:" destination="BYZ-38-t0r" id="CNc-pY-pfP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yej-3e-G30">
+                                <rect key="frame" x="18" y="331" width="284" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GPh-RC-LVQ"/>
+                                    <constraint firstAttribute="width" constant="280" id="qsa-Bp-Olv"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="volumeAjuste:" destination="BYZ-38-t0r" eventType="valueChanged" id="PKN-xU-9u4"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frango.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U6m-YO-lyk">
+                                <rect key="frame" x="20" y="73" width="280" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="EUA-LO-puF"/>
+                                    <constraint firstAttribute="height" constant="240" id="qOK-tT-fK2"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="-0.5" minValue="-0.5" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vzm-w9-aVR">
+                                <rect key="frame" x="18" y="384" width="284" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="4W5-8K-PYa"/>
+                                    <constraint firstAttribute="height" constant="30" id="tZH-vc-kCi"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="scrubAjuste:" destination="BYZ-38-t0r" eventType="valueChanged" id="GQc-12-ExR"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="thO-lZ-lue" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="BrX-PC-tFr"/>
+                            <constraint firstItem="PcZ-ha-kh6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Du2-wx-ZKP"/>
+                            <constraint firstItem="vzm-w9-aVR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FFh-mv-E7o"/>
+                            <constraint firstItem="U6m-YO-lyk" firstAttribute="top" secondItem="PcZ-ha-kh6" secondAttribute="bottom" constant="9" id="GSA-Tb-YS0"/>
+                            <constraint firstItem="vzm-w9-aVR" firstAttribute="top" secondItem="Yej-3e-G30" secondAttribute="bottom" constant="23" id="K4v-8U-HVg"/>
+                            <constraint firstItem="U6m-YO-lyk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bDI-ZS-OQj"/>
+                            <constraint firstItem="PcZ-ha-kh6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ceW-2L-D2N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PcZ-ha-kh6" secondAttribute="trailing" constant="-20" id="djz-SZ-JH2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="thO-lZ-lue" secondAttribute="bottom" id="g8p-t4-FfT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="thO-lZ-lue" secondAttribute="trailing" constant="-20" id="kkH-5O-Vrh"/>
+                            <constraint firstItem="Yej-3e-G30" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mTN-o1-DCW"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="scrubSlider" destination="vzm-w9-aVR" id="KOb-cO-1VH"/>
+                        <outlet property="volumeSlider" destination="Yej-3e-G30" id="hI1-pj-Mxv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="352"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="frango.jpg" width="1097" height="1600"/>
+    </resources>
 </document>
